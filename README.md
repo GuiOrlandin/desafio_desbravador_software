@@ -30,6 +30,20 @@ npm run dev
 
 Acesse `http://localhost:5173`.
 
+## Testes
+
+O projeto inclui **testes unitários** das páginas (`HomePage`, `UserPage`, `RepoPage`, `NotFoundPage`) com **Vitest** e **Testing Library**. Requisições à API do GitHub são mockadas — os testes não dependem de rede.
+
+```bash
+# modo watch
+npm test
+
+# execução única
+npm run test:run
+```
+
+Os testes ficam em `src/pages/**/index.test.tsx`. Utilitários compartilhados (render com providers, mocks e cleanup) estão em `src/test/`.
+
 ## Por que TanStack Query (React Query)
 
 O gerenciamento de dados assíncronos da API do GitHub usa **TanStack Query** em vez de `useEffect` manual porque:

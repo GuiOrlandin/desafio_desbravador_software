@@ -39,7 +39,7 @@ function resolveErrorKind(
   return typeof resolver === "string" ? resolver : resolver(apiMessage);
 }
 
-function createGitHubApiError(
+export function createGitHubApiError(
   message: string,
   status: number,
   data: GitHubErrorBody | null = null,
